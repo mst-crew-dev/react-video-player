@@ -1,0 +1,23 @@
+@import '../../../styles/variables';
+
+progress {
+  color: red;
+  width: 100%;
+  height: 3px;
+  border: none;
+  background: $wild-sand;
+  margin: 0;
+  border-radius: 9px;
+  vertical-align: middle;
+  cursor: pointer;
+
+  &[value]::-webkit-progress-bar {
+    background-color: $wild-sand;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  }
+
+  &[value]::-webkit-progress-value {
+    background-color: red;
+  }
+}
