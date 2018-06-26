@@ -17,21 +17,19 @@ class Player extends Component {
   componentDidMount() {
     this.player = this.videoEl.current;
     this.player.addEventListener('timeupdate', this.updateProgressBar, false);
+    this.player.addEventListener('pause', () => { this.setState({ playInProgress: false }) }, false);
+    this.player.addEventListener('play', () => { this.setState({ playInProgress: true }) }, false);
   }
 
   updateProgressBar = () => {
-    this.setState({
-      seek: Math.floor((100 / this.player.duration) * this.player.currentTime)
-    });
+    this.setState({ seek: Math.floor((100 / this.player.duration) * this.player.currentTime) });
   };
 
   onPlayPause = () => {
     if (this.player.paused || this.player.ended) {
       this.player.play();
-      this.setState({ playInProgress: true});
     } else {
       this.player.pause();
-      this.setState({ playInProgress: false});
     }
   };
 
