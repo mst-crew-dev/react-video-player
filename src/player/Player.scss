@@ -14,6 +14,12 @@
 
   &:-webkit-full-screen {
     width: 100%;
+
+    #controls {
+      position: absolute;
+      z-index: 9999999999999;
+      bottom: 0;
+    }
   }
 
   video {

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import TimeBar  from './components/TimeBar/TimeBar';
-import SeekBar  from './components/SeekBar/SeekBar';
-import PlayButton  from './components/PlayButton/PlayButton';
-import StopButton  from './components/StopButton/StopButton';
-import VolumeButton  from './components/VolumeButton/VolumeButton';
-import FullScreenButton from "./components/FullScreenButton/FullScreenButton";
+import TimeBar  from './TimeBar/TimeBar';
+import SeekBar  from './SeekBar/SeekBar';
+import PlayButton  from './PlayButton/PlayButton';
+import StopButton  from './StopButton/StopButton';
+import VolumeButton  from './VolumeButton/VolumeButton';
+import FullScreenButton from "./FullScreenButton/FullScreenButton";
 import './Player.scss'
 
 class Player extends Component {
@@ -28,13 +28,7 @@ class Player extends Component {
     this.player.addEventListener('volumechange', this.onVolumeChange, false);
     this.player.addEventListener('pause', () => { this.setState({ playInProgress: false }) }, false);
     this.player.addEventListener('play', () => { this.setState({ playInProgress: true }) }, false);
-
-    this.player.onloadeddata = () => {
-      this.setState({
-        durationTime: this.player.duration,
-        controlsVisible: true,
-      });
-    };
+    this.player.onloadeddata = () => { this.setState({ durationTime: this.player.duration }); };
   }
 
   onPlayPauseClick = () => {

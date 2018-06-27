@@ -40,6 +40,8 @@ describe('<PlayButton />', () => {
 
     expect(onPlayButtonClick)
       .toHaveBeenCalled();
+
+    onPlayButtonClick.mockClear();
   });
 
 });

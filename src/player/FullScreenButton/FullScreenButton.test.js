@@ -30,6 +30,8 @@ describe('<FullScreenButton />', () => {
 
     expect(onToggleFullScreenClick)
       .toHaveBeenCalled();
+
+    onToggleFullScreenClick.mockClear();
   });
 
 });

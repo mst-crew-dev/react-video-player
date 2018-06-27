@@ -8,7 +8,7 @@ Live Demo [here](https://mst-crew-dev.github.io/react-video-player-build/).
 
 ### TODO List
 * Add more API features/actions;
-* Write Unit Tests;
+* Finish Unit Tests;
 * Write E2E Tests.
 
 ## Getting Started

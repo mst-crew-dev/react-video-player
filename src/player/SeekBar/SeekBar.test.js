@@ -43,6 +43,8 @@ describe('<SeekBar />', () => {
 
     expect(onSeekChangeClick)
       .toHaveBeenCalled();
+
+    onSeekChangeClick.mockClear();
   });
 
 });

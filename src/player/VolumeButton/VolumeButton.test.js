@@ -40,6 +40,8 @@ describe('<VolumeButton />', () => {
 
     expect(onVolumeButtonClick)
       .toHaveBeenCalled();
+
+    onVolumeButtonClick.mockClear();
   });
 
 });
