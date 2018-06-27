@@ -1,4 +1,5 @@
 import React from 'react';
+import 'SeekBar.scss';
 
 function SeekBar(props) {
   const { seek, seekChangeClick } = props;
