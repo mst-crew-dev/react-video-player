@@ -1,10 +1,10 @@
 import React from 'react';
 
 function FullScreenButton(props) {
-  const { requestFullScreenClick } = props;
+  const { toggleFullScreenClick } = props;
 
   return (
-    <button className="btn" onClick={requestFullScreenClick} disabled={true}>
+    <button className="btn" onClick={toggleFullScreenClick}>
       <i className="fas fa-expand" />
     </button>
   );

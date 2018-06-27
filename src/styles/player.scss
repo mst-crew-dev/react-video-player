@@ -12,6 +12,10 @@
   background-color: $black;
   box-shadow: 0 0 2rem rgba($black, .5);
 
+  &:-webkit-full-screen {
+    width: 100%;
+  }
+
   video {
     width: 100%;
     height: auto;
@@ -28,12 +32,6 @@
     flex-direction: column;
     background-color: $black;
     width: 100%;
-
-/*    &.fullscreen {
-      position: absolute;
-      z-index: 99999999999;
-      bottom: 0;
-    }*/
 
     .buttons {
       display: flex;
@@ -55,18 +53,6 @@
         margin-left: 10px;
       }
     }
-  }
-}
-
-:-webkit-full-screen-ancestor,
-:-webkit-full-screen,
-:-moz-full-screen,
-:-ms-fullscreen,
-:fullscreen {
-  &#controls {
-    position: absolute;
-    z-index: 99999999999;
-    bottom: 0;
   }
 }
 

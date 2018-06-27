@@ -66,13 +66,29 @@ class Player extends Component {
     this.player.currentTime = value * this.player.duration;
   };
 
-  onRequestFullScreen = () => {
-    if (this.player.requestFullscreen) {
-      this.player.requestFullscreen();
-    } else if (this.player.mozRequestFullScreen) {
-      this.player.mozRequestFullScreen();
-    } else if (this.player.webkitRequestFullscreen) {
-      this.player.webkitRequestFullscreen();
+  onToggleFullScreen = () => {
+    const player = document.getElementById("player-container");
+
+    if (document.fullscreen || document.webkitIsFullScreen) {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      }
+    } else {
+      if (player.requestFullscreen) {
+        player.requestFullscreen();
+      } else if (player.mozRequestFullScreen) {
+        player.mozRequestFullScreen();
+      } else if (player.webkitRequestFullscreen) {
+        player.webkitRequestFullscreen();
+      } else {
+        alert('Your browser doesn\'t support full screen mode');
+      }
     }
   };
 
@@ -80,7 +96,7 @@ class Player extends Component {
     const { source, seek, playInProgress, currentTime, durationTime, muted } = this.state;
 
     return (
-      <div className="container">
+      <div id="player-container" className="container">
         <video ref={this.videoEl} >
           <source src={source} type="video/mp4"/>
         </video>
@@ -94,7 +110,7 @@ class Player extends Component {
             </div>
             <div className="right">
               <SoundButton muted={muted} soundButtonClick={this.onMuteClick} />
-              <FullScreenButton requestFullScreenClick={this.onRequestFullScreen} />
+              <FullScreenButton toggleFullScreenClick={this.onToggleFullScreen} />
             </div>
           </div>
         </div>

@@ -7,7 +7,6 @@ Frontend React JS Application that represents HTML5 Video API.
 Live Demo [here](https://mst-crew-dev.github.io/react-video-player-build/).
 
 ### TODO List
-* Correct FullScreen mode support;
 * Add more API features/actions;
 * Write Unit Tests;
 * Write E2E Tests.
