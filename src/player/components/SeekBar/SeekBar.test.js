@@ -19,7 +19,7 @@ describe('<SeekBar />', () => {
       .toEqual("100");
   });
 
-  it('should change progress bar when seek is changed', () => {
+  it('should change progress bar when seek is updated', () => {
     const component = shallow(<SeekBar />);
 
     component.setProps({ seek: 1 });
@@ -34,7 +34,7 @@ describe('<SeekBar />', () => {
   it('should triggers \'onSeekChangeClick\' when the progress bar is clicked', () => {
     const onSeekChangeClick = jest.fn();
     const component = shallow(<SeekBar seekChangeClick={onSeekChangeClick} />);
-    const mockedEvent = { pageX: 0, target: {offsetLeft : 10, offsetWidth: 20}  };
+    const mockedEvent = { pageX: 1, target: {offsetLeft : 10, offsetWidth: 20}  };
 
     expect(onSeekChangeClick)
       .not.toHaveBeenCalled();

@@ -3,7 +3,7 @@ import TimeBar  from './components/timeBar';
 import SeekBar  from './components/SeekBar/SeekBar';
 import PlayButton  from './components/playButton';
 import StopButton  from './components/StopButton/StopButton';
-import SoundButton  from './components/soundButton';
+import VolumeButton  from './components/VolumeButton/VolumeButton';
 import FullScreenButton from "./components/FullScreenButton/FullScreenButton";
 
 class Player extends Component {
@@ -45,7 +45,7 @@ class Player extends Component {
     if (this.player.currentTime) this.player.currentTime = 0;
   };
 
-  onMuteClick = () => {
+  onMuteChange = () => {
     this.player.muted = !this.player.muted;
   };
 
@@ -109,7 +109,7 @@ class Player extends Component {
               <TimeBar current={currentTime} duration={durationTime} />
             </div>
             <div className="right">
-              <SoundButton muted={muted} soundButtonClick={this.onMuteClick} />
+              <VolumeButton muted={muted} volumeButtonClick={this.onMuteChange} />
               <FullScreenButton toggleFullScreenClick={this.onToggleFullScreen} />
             </div>
           </div>

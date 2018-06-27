@@ -1,14 +1,14 @@
 import React from 'react';
 
-function SoundButton(props) {
-  const { muted, soundButtonClick} = props;
+function VolumeButton(props) {
+  const { muted, volumeButtonClick} = props;
   const iconClass = muted ? 'fas fa-volume-off' : 'fas fa-volume-up';
 
   return (
-    <button className="btn" onClick={soundButtonClick}>
+    <button className="btn" onClick={volumeButtonClick}>
       <i className={iconClass} />
     </button>
   );
 }
 
-export default SoundButton;
+export default VolumeButton;
