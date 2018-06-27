@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import TimeBar  from './components/timeBar';
 import SeekBar  from './components/SeekBar/SeekBar';
 import PlayButton  from './components/playButton';
-import StopButton  from './components/stopButton';
+import StopButton  from './components/StopButton/StopButton';
 import SoundButton  from './components/soundButton';
-import FullScreenButton from "./components/fullScreenButton";
+import FullScreenButton from "./components/FullScreenButton/FullScreenButton";
 
 class Player extends Component {
   constructor() {
