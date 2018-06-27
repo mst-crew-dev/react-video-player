@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import TimeBar  from './components/TimeBar/TimeBar';
 import SeekBar  from './components/SeekBar/SeekBar';
-import PlayButton  from './components/playButton';
+import PlayButton  from './components/PlayButton/PlayButton';
 import StopButton  from './components/StopButton/StopButton';
 import VolumeButton  from './components/VolumeButton/VolumeButton';
 import FullScreenButton from "./components/FullScreenButton/FullScreenButton";
+import './Player.scss'
 
 class Player extends Component {
   constructor() {
