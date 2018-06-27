@@ -1,4 +1,5 @@
 import React from 'react';
+import './TimeBar.scss';
 
 function TimeBar(props) {
   const { current, duration } = props;

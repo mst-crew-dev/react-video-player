@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TimeBar  from './components/timeBar';
+import TimeBar  from './components/TimeBar/TimeBar';
 import SeekBar  from './components/SeekBar/SeekBar';
 import PlayButton  from './components/playButton';
 import StopButton  from './components/StopButton/StopButton';
