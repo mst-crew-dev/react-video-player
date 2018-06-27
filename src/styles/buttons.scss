@@ -1,48 +1,25 @@
 @import 'variables';
 
 .btn {
-  width: 0;
+  width: 20px;
   height: 20px;
+  padding: 0;
+  cursor: pointer;
+  transition: 100ms all ease;
+  box-sizing: border-box;
+  outline: none;
+  background: transparent;
+  color: $white;
+  border: none;
+  font-size: 18px;
 
-  &-play {
-    padding: 0;
-    margin-right: 10px;
-    cursor: pointer;
-    background: transparent;
-    box-sizing: border-box;
-    border-color: transparent transparent transparent $white;
-    transition: 100ms all ease;
-    border-style: solid;
-    border-width: 10px 0 10px 18px;
-    outline: none;
-
-    &-in-progress {
-      border-style: double;
-      border-width: 0 0 0 18px;
-    }
-
-    &:hover {
-      border-color: transparent transparent transparent $wild-sand;
-    }
+  &:hover {
+    color: $wild-sand;
   }
 
-  &-icon {
-    padding: 0;
-    border: none;
-    background: none;
-
-    .icon {
-      font-size: 36px;
-      color: $dusty-gray;
-    }
-
-    &:hover {
-      cursor: pointer;
-
-      .icon {
-        color: $dark-gray;
-      }
-    }
+  &:disabled,
+  &:hover:disabled {
+    color: $dusty-sand-gray;
   }
 }
 

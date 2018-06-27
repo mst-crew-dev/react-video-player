@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Player from './player/player';
-import './index.scss';
+import './styles/style-import.scss';
 
 ReactDOM.render(
   <Player/>,

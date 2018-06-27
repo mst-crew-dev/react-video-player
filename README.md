@@ -1,15 +1,16 @@
 # HTML5 Video Player on ReactJS
-![Video Player](_mockup/scrren.jpg "Weather App [ReactJS]")
+![Video Player](_mockup/player.jpg "")
 
 ## Description
-Frontend React JS Application that represents HTML5 Video Player API.
+Frontend React JS Application that represents HTML5 Video API.
 
 Live Demo [here](https://).
 
-### Main Features
-
 ### TODO List
-* Write Unit Tests
+* Correct FullScreen mode support;
+* Add more API features/actions;
+* Write Unit Tests;
+* Write E2E Tests.
 
 ## Getting Started
 Application is made with [React](https://reactjs.org/) and use [SASS](https://sass-lang.com/) grade CSS extension language.
